@@ -2,22 +2,739 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Food Delivery Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="icon" type="image/png" sizes="66x52" href="/logo.svg" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <!-------------------- header -------------------->
+
+    <header class="header" id="home">
+      <div class="container header-container">
+        <a href="./index.html" class="logo {=$class-modifier}">
+          <img
+            class="logo-image"
+            src="/logo.svg"
+            alt="Logo of our site"
+            width="66"
+            height="52"
+          />
+        </a>
+
+        <!-------------------- menu burger  -------------------->
+
+        <div class="burger js-menu js-menu-close" data-menu-button>
+          <span class="burger-icon"></span>
+        </div>
+        <nav class="navigation">
+          <ul class="nav-list {=$class-list-modifier}">
+            <li class="nav-item {=$class-item-modifier}">
+              <a href="#home" class="nav-link current {=$class-link-modifier}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item {=$class-item-modifier}">
+              <a href="#customers" class="nav-link {=$class-link-modifier}"
+                >Customers</a
+              >
+            </li>
+            <li class="nav-item {=$class-item-modifier}">
+              <a href="#about" class="nav-link {=$class-link-modifier}"
+                >About</a
+              >
+            </li>
+            <li class="nav-item {=$class-item-modifier}">
+              <a href="#service" class="nav-link {=$class-link-modifier}"
+                >Service</a
+              >
+            </li>
+            <li class="nav-item {=$class-item-modifier}">
+              <a href="#menu" class="nav-link {=$class-link-modifier}">Menu</a>
+            </li>
+            <li class="nav-item {=$class-item-modifier}">
+              <a href="#contact" class="nav-link {=$class-link-modifier}"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          type="button"
+          class="header-button btn js-open-modal"
+          data-modal="1"
+        >
+          Order Now
+        </button>
+      </div>
+    </header>
+
+    <!-------------------- main content -------------------->
 
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <!-------------------- section hero -------------------->
+
+      <section class="hero">
+        <div class="container hero-container">
+          <h1 class="hero-title">Enjoy Your Favorite Food From Anywhere</h1>
+          <div class="hero-text-wrapper">
+            <p class="hero-text">
+              With just a few clicks, you can have your favorite meals delivered
+              straight to your doorstep, no matter where you are. Order now and
+              enjoy a hassle-free and delicious meal from the comfort of your
+              own home.
+            </p>
+            <button
+              type="button"
+              class="hero-btn btn js-open-modal"
+              data-modal="1"
+            >
+              Order Now
+            </button>
+          </div>
+          <div class="swiper orderSwiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/hero/dec/Foto1.png    1x,
+                      ./images/hero/dec/Foto1-2x.png 2x
+                    "
+                    media="(min-width: 1280px)"
+                    type="image/png"
+                  />
+                  <source
+                    srcset="
+                      ./images/hero/tab/Foto1.png    1x,
+                      ./images/hero/tab/Foto1-2x.png 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/png"
+                  />
+                  <img
+                    src="./images/hero/tab/Foto1.png"
+                    alt="Foto1"
+                    class="swiper-img-hero"
+                  />
+                </picture>
+              </li>
+              <li class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/hero/dec/Foto2.png    1x,
+                      ./images/hero/dec/Foto2-2x.png 2x
+                    "
+                    media="(min-width: 1280px)"
+                    type="image/png"
+                  />
+                  <source
+                    srcset="
+                      ./images/hero/tab/Foto2.png    1x,
+                      ./images/hero/tab/Foto2-2x.png 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/png"
+                  />
+                  <img
+                    src="./images/hero/tab/Foto2.png"
+                    alt="Foto2"
+                    class="swiper-img-hero"
+                  />
+                </picture>
+              </li>
+              <li class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/hero/dec/Foto3.png    1x,
+                      ./images/hero/dec/Foto3-2x.png 2x
+                    "
+                    media="(min-width: 1280px)"
+                    type="image/png"
+                  />
+                  <source
+                    srcset="
+                      ./images/hero/tab/Foto3.png    1x,
+                      ./images/hero/tab/Foto3-2x.png 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/png"
+                  />
+                  <img
+                    src="./images/hero/tab/Foto3.png"
+                    alt="Foto3"
+                    class="swiper-img-hero"
+                  />
+                </picture>
+              </li>
+            </ul>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------------- section about -------------------->
+
+      <section class="about" id="about">
+        <div class="container about-container">
+          <div class="about-image-container">
+            <div class="about-image-wrapper">
+              <img
+                class="about-image"
+                src="./images/apple.png"
+                alt="section image"
+                width="396"
+              />
+            </div>
+          </div>
+          <div class="about-wrapper">
+            <h2 class="about-title title">
+              What’s Special About Our Offerings
+            </h2>
+            <p class="about-text">
+              With our platform, you can browse through a diverse selection of
+              cuisines and local restaurants, and choose from a variety of
+              dishes that cater to your specific taste buds.
+            </p>
+            <ul class="about-list">
+              <li class="about-item">
+                <div class="icon-wrapper">
+                  <svg class="about-icon" width="32" height="32">
+                    <use href="/icons/icons.svg#icon-rocket"></use>
+                  </svg>
+                </div>
+                <h3 class="about-item-title">Fasest Delivery</h3>
+                <p class="about-item-text">
+                  Our advanced logistics system and dedicated delivery partners
+                  ensure that your meals are delivered to you within 30-minutes.
+                </p>
+              </li>
+              <li class="about-item">
+                <div class="icon-wrapper">
+                  <svg class="about-icon" width="32" height="32">
+                    <use href="/icons/icons.svg#icon-touch"></use>
+                  </svg>
+                </div>
+                <h3 class="about-item-title">Easy To Order</h3>
+                <p class="about-item-text">
+                  You can browse through a wide variety of cuisines and
+                  restaurants, select your favorite meals, and place your order
+                  in just a few clicks.
+                </p>
+              </li>
+            </ul>
+            <div class="btn-container">
+              <button
+                type="button"
+                class="about-btn btn js-open-modal"
+                data-modal="2"
+              >
+                Order Now
+              </button>
+              <div class="text-container">
+                <button type="button" class="read-more">
+                  <svg class="read-more-icon" width="18" height="16">
+                    <use href="/icons/icons.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <p class="extra-text">
+                  Order now and receive 10% off your first meal with Enjoy Your
+                  Favorite Food From Anywhere.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------------- section favourites -------------------->
+
+      <section class="favorites" id="menu">
+        <div class="container">
+          <h1 class="favorites-title">Some of Our Favorites</h1>
+          <p class="favorites-text">Looking for something delicious?</p>
+          <ul class="favorites-list">
+            <li class="favorites-item">
+              <a
+                href="https://YevheniiaZalevska.github.io/food-delivery-service/images/favorites/gamburger-3x.png"
+              >
+                <img
+                  class="favorites-img"
+                  src="/images/favorites/gamburger.png"
+                  alt="photo of gamburger"
+                  width="315"
+              /></a>
+            </li>
+            <li class="favorites-item">
+              <a
+                href="https://YevheniiaZalevska.github.io/food-delivery-service/images/favorites/pasta-3x.png"
+              >
+                <img
+                  class="favorites-img"
+                  src="/images/favorites/pasta.png"
+                  alt="photo of pasta"
+                  width="315"
+              /></a>
+            </li>
+            <li class="favorites-item">
+              <a
+                href="https://YevheniiaZalevska.github.io/food-delivery-service/images/favorites/pizza-3x.png"
+              >
+                <img
+                  class="favorites-img"
+                  src="./images/favorites/pizza.png"
+                  alt="photo of pizza"
+                  width="315"
+              /></a>
+            </li>
+            <li class="favorites-item">
+              <a
+                href="https://YevheniiaZalevska.github.io/food-delivery-service/images/favorites/chicken-3x.png"
+              >
+                <img
+                  class="favorites-img"
+                  src="/images/favorites/chicken.png"
+                  alt="photo of chicken"
+                  width="315"
+              /></a>
+            </li>
+            <li class="favorites-item">
+              <a
+                href="https://YevheniiaZalevska.github.io/food-delivery-service/images/favorites/salat-3x.png"
+              >
+                <img
+                  class="favorites-img"
+                  src="/images/favorites/salat.png"
+                  alt="photo of salat"
+                  width="315"
+              /></a>
+            </li>
+            <li class="favorites-item">
+              <a
+                href="https://YevheniiaZalevska.github.io/food-delivery-service/images/favorites/borshch-3x.png"
+              >
+                <img
+                  class="favorites-img"
+                  src="/images/favorites/borshch.png"
+                  alt="photo of borshch"
+                  width="315"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-------------------- section review -------------------->
+
+      <section class="reviews" id="customers">
+        <div class="container">
+          <h1 class="reviews-title">What our Customers Say</h1>
+          <p class="reviews-subtitle">
+            Don't just take our word for it - see what our satisfied customers
+            have to say
+          </p>
+          <ul class="reviews-list">
+            <li class="reviews-item">
+              <ul class="reviews-stars-list">
+                <li class="reviews-stars-item">
+                  <svg class="reviews-stars-icon" width="17" height="18">
+                    <use href="/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </li>
+                <li class="reviews-stars-item">
+                  <svg class="reviews-stars-icon" width="17" height="18">
+                    <use href="/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </li>
+                <li class="reviews-stars-item">
+                  <svg class="reviews-stars-icon" width="17" height="18">
+                    <use href="/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </li>
+                <li class="reviews-stars-item">
+                  <svg class="reviews-stars-icon" width="17" height="18">
+                    <use href="/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </li>
+              </ul>
+              <p class="reviews-item-text">
+                “The Best app I have used to order food in a while, so many
+                options to choose from too, I would recommend to a freind, No
+                questions asked”
+              </p>
+              <div class="reviews-info-container">
+                <img
+                  class="reviews-item-img"
+                  src="./images/reviews/man-image.jpg"
+                  alt="man-image"
+                  width="48"
+                />
+                <div class="reviews-text-container">
+                  <h2 class="reviews-item-title">Sumith Shah</h2>
+                  <p class="reviews-item-name">Some Dude</p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews-item">
+              <ul class="reviews-stars-list">
+                <li class="reviews-stars-item">
+                  <svg class="reviews-stars-icon" width="17" height="18">
+                    <use href="/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </li>
+                <li class="reviews-stars-item">
+                  <svg class="reviews-stars-icon" width="17" height="18">
+                    <use href="/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </li>
+                <li class="reviews-stars-item">
+                  <svg class="reviews-stars-icon" width="17" height="18">
+                    <use href="/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </li>
+                <li class="reviews-stars-item">
+                  <svg class="reviews-stars-icon" width="17" height="18">
+                    <use href="/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </li>
+              </ul>
+              <p class="reviews-item-text">
+                “The ease with which I can just go in and order what i want was
+                amazing, It has been a very pleasant experience ordering from
+                this app”
+              </p>
+              <div class="reviews-info-container">
+                <img
+                  class="reviews-item-img"
+                  src="./images/reviews/girl-image.jpg"
+                  alt="girl-image"
+                  width="48"
+                />
+                <div class="reviews-text-container">
+                  <h2 class="reviews-item-title">Sumith Shah</h2>
+                  <p class="reviews-item-name">Some Dude</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-------------------- section subscribe -------------------->
+
+      <section class="subscribe" id="contact">
+        <div class="container subscribe-container">
+          <img
+            class="subscribe-image"
+            src="./images/banan.png"
+            alt="photo of a banana"
+            width="608"
+          />
+          <div class="subscribe-wrapper">
+            <h1 class="subscribe-title">Subscribe To Get Special Offers</h1>
+            <p class="subscribe-text">
+              Order now and receive 10% off your first meal with Enjoy Your
+              Favorite Food From Anywhere.
+            </p>
+            <form class="subscribe-form">
+              <label class="subscribe-form-label">
+                <input
+                  class="subscribe-form-input"
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </label>
+              <button type="submit" class="subscribe-form-btn btn">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <load src="./partials/footer.html" />
+    <!-------------------- footer -------------------->
 
-    <script type="module" src="./main.js"></script>
+    <footer class="footer" id="service">
+      <div class="container">
+        <div class="footer-up-wrapper">
+          <div class="foooter-up-container">
+            <a href="./index.html" class="logo {=$class-modifier}">
+              <img
+                class="logo-image"
+                src="/logo.svg"
+                alt="Logo of our site"
+                width="66"
+                height="52"
+              />
+            </a>
+            <ul class="nav-list {=$class-list-modifier}">
+              <li class="nav-item {=$class-item-modifier}">
+                <a href="#home" class="nav-link current {=$class-link-modifier}"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item {=$class-item-modifier}">
+                <a href="#customers" class="nav-link {=$class-link-modifier}"
+                  >Customers</a
+                >
+              </li>
+              <li class="nav-item {=$class-item-modifier}">
+                <a href="#about" class="nav-link {=$class-link-modifier}"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item {=$class-item-modifier}">
+                <a href="#service" class="nav-link {=$class-link-modifier}"
+                  >Service</a
+                >
+              </li>
+              <li class="nav-item {=$class-item-modifier}">
+                <a href="#menu" class="nav-link {=$class-link-modifier}"
+                  >Menu</a
+                >
+              </li>
+              <li class="nav-item {=$class-item-modifier}">
+                <a href="#contact" class="nav-link {=$class-link-modifier}"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-form-container">
+            <p class="footer-form-title">Subscribe</p>
+            <form class="subscribe-form footer-form">
+              <label class="subscribe-form- label">
+                <input
+                  class="subscribe-form-input footer-form-input"
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </label>
+              <button
+                type="submit"
+                class="subscribe-form-btn footer-form-btn btn"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p class="form-policy">
+              By subscribing you agree to with our
+              <a class="form-policy-link" href="">Privacy Policy</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer-down-wrapper">
+          <ul class="policy-list">
+            <li class="policy-item">
+              <a class="policy-link" href="">Privacy Policy</a>
+            </li>
+            <li class="policy-item">
+              <a class="policy-link" href="">Terms of Service</a>
+            </li>
+            <li class="policy-item">
+              <a class="policy-link" href="">Cookies Settings</a>
+            </li>
+          </ul>
+          <p class="footer-copyright">2022 FoodSta. All right reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-------------------- modal -------------------->
+
+    <div class="modal" data-modal="1">
+      <button type="button" class="modal-btn-close js-modal-close">
+        <svg class="modal-icon-close" width="24" height="24">
+          <use href="/icons/icons.svg#icon-menu-close"></use>
+        </svg>
+      </button>
+      <p class="modal-title">Order Form</p>
+      <form class="form">
+        <ul class="form-list">
+          <li class="form-item">
+            <label for="user-name" class="form-label">Name</label
+            ><input
+              type="text"
+              class="form-input"
+              id="user-name"
+              name="user-name"
+              placeholder="Your name"
+            />
+          </li>
+          <li class="form-item">
+            <label for="user-tel" class="form-label">Phone number</label
+            ><input
+              type="tel"
+              class="form-input"
+              id="user-tel"
+              name="user-tel"
+              placeholder="+38(0_ _) _ _ _   _ _   _ _"
+            />
+          </li>
+          <li class="form-item">
+            <label for="user-email" class="form-label">E-mail</label
+            ><input
+              type="email"
+              class="form-input"
+              id="user-email"
+              name="user-email"
+              placeholder="example@gmail.com"
+            />
+          </li>
+        </ul>
+        <button class="modal-submit-btn" type="submit">Send</button>
+      </form>
+    </div>
+
+    <!------------------------- about -------------------->
+
+    <div class="modal" data-modal="2">
+      <button type="button" class="modal-btn-close js-modal-close">
+        <svg class="modal-icon-close" width="24" height="24">
+          <use href="/icons/icons.svg#icon-menu-close"></use>
+        </svg>
+      </button>
+      <p class="modal-title">Choose product</p>
+      <form class="veg-form">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="/images/favorites/borshch.png"
+                alt="Borshch"
+                class="swiper-vegetable"
+              />
+              <input
+                type="number"
+                class="veg-form-input"
+                name="quantity"
+                min="0"
+                step="1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/favorites/pasta.png"
+                alt="Pasta"
+                class="swiper-vegetable"
+              />
+              <input
+                type="number"
+                class="veg-form-input"
+                name="quantity"
+                min="0"
+                step="1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/favorites/gamburger.png"
+                alt="Gamburger"
+                class="swiper-vegetable"
+              />
+              <input
+                type="number"
+                class="veg-form-input"
+                name="quantity"
+                min="0"
+                step="1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/favorites/chicken.png"
+                alt="Chicken"
+                class="swiper-vegetable"
+              />
+              <input
+                type="number"
+                class="veg-form-input"
+                name="quantity"
+                min="0"
+                step="1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/favorites/salat.png"
+                alt="Salat"
+                class="swiper-vegetable"
+              />
+              <input
+                type="number"
+                class="veg-form-input"
+                name="quantity"
+                min="0"
+                step="1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="/images/favorites/pizza.png"
+                alt="Pizza"
+                class="swiper-vegetable"
+              />
+              <input
+                type="number"
+                class="veg-form-input"
+                name="quantity"
+                min="0"
+                step="1"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <button class="modal-submit-btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <!--? Overlay pizzas-->
+    <div class="modal-overlay js-overlay-modal">
+      <div id="background-wrap">
+        <img
+          src="/images/favorites/borshch.png"
+          alt="Carrot"
+          class="vegetable"
+        />
+        <img
+          src="/images/favorites/pasta.png"
+          alt="Broccoli"
+          class="vegetable"
+        />
+        <img
+          src="/images/favorites/gamburger.png"
+          alt="Tomato"
+          class="vegetable"
+        />
+        <img
+          src="/images/favorites/chicken.png"
+          alt="Pepper"
+          class="vegetable"
+        />
+        <img src="/images/favorites/salat.png" alt="Pepper" class="vegetable" />
+        <img src="/images/favorites/pizza.png" alt="Pepper" class="vegetable" />
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
